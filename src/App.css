@@ -1,8 +1,11 @@
 html,body{
     margin: 0;
     padding: 0;
+      padding-top: 28px;
   font-family: 'Mulish', sans-serif;
   min-width: 100%;
+    overflow-x: hidden;
+
 }
 .home-container,
 .home-section1,
@@ -423,7 +426,6 @@ text-decoration: none;
   position: relative;
 }
 
-/* غلاف الفيديو */
 .video-cover {
   position: relative;
   display: inline-block;
@@ -439,8 +441,6 @@ text-decoration: none;
   opacity: 1;
   transform: translateY(0);
 }
-
-/* زر التشغيل */
 .play-btn {
   position: absolute;
   top: 50%;
@@ -453,7 +453,6 @@ text-decoration: none;
   font-size: 30px;
   cursor: pointer;
 }
-
 /* popup الفيديو */
 .video-popup {
   position: fixed;
@@ -707,5 +706,153 @@ text-decoration: none;
   margin-right: 5px;
   color: #2eca7f;
 }
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 1s ease-in-out; /* حركة سلسة */
+}
+
+.slide {
+  flex: 0 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+ 
+
+.check-container{
+  padding: 18px;
+}
+.check {
+  color: #1a2d62;
+  font-size:18px ;
+  font-weight: 600;
+}
+.check i{
+  color: #2eca7f;
+  padding: 10px;
+}
+.platform-section {
+  background-size: cover;
+  background-position: center;
+}
+
+.price-card-container {
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 150px 0px rgba(78, 67, 250, 0.06);
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+.price-card-head{text-align: left;}
+
+.price-card-head h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a2d62;
+}
+.price-card-head h1 {
+  font-size: 40px;
+  color: #1a2d62;
+  margin: 0;
+}
+.price-card-head div {
+  color: #888;
+  font-size: 14px;
+}
+.price-card-head .upgrade {
+  color: #2ecc71;
+  font-weight: 700;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+.price-card-container hr {
+  margin: 20px 0;
+  border-top: 1px solid #888;
+}
+.price-card-info {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+.price-card-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #888;
+}
+.price-card-info li .icon {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.price-card-container .btn3 {
+  background: #2eca7f;
+  border-radius: 2px;
+  color: #fff;
+  border: none;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.price-card-container .btn3:hover {
+  background: #1a2d62;
+}
 
 
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 20px;
+   margin: 30px auto;
+   max-width: 600px;
+}
+
+.custom-pagination .page-item .page-link {
+  border: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: transparent;
+  color: #2eca7f; /* أخضر */
+  font-weight: bold;
+  position: relative;
+}
+
+.custom-pagination .page-item.active .page-link::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: #2eca7f;
+  border-radius: 2px;
+  margin: 4px auto 0;
+}
+
+.custom-pagination .page-link:focus,
+.custom-pagination .page-link:hover {
+  background-color: #e9f7f2;
+  color: #2eca7f;
+}

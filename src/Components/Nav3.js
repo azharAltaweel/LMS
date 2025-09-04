@@ -4,8 +4,8 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"; // For the toggle functional
 
 function Nav3() {
   return (
-    <nav className="navbar navbar-expand-lg bg-light custom-navbar" fixed="top" >
-      <div className="container">
+    <nav className="navbar navbar-expand-lg bg-light custom-navbar fixed-top"style={{ top: "55px" }} >
+      <div className="container-fluid">
         <a className="navbar-brand" href="#home">
           <img src={Logo2} alt="Logo" height="40" />
         </a>

@@ -10,6 +10,8 @@ import { FaSmile, FaFileAlt, FaHeadphones, FaUser } from "react-icons/fa";
  import person3 from "../Assets/Images/person3.jpg";
  import person4 from "../Assets/Images/person4.jpg";
 import FAQ from "./QuestionSection";
+import Slider from "./Slider";
+
 
  const Features=[
     { icon:<i class="bi bi-book icon-circle-bg" ></i>, title: "Learn More Anywhere", subtitle: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor ut labore." },
@@ -88,6 +90,8 @@ return(
         borderRadius:"30px",margin:"auto",padding:"10px",fontSize:"24px",textAlign:"center"
     }}>Trusted Company Arround The World!</h3>
 </div>
+      <Slider/>
+
 
         </section>
 </div>

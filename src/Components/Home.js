@@ -12,6 +12,10 @@ import Design2Course from "../Assets/Images/design-course.jpg";
 import DSCourse from "../Assets/Images/DS-course.jpg";
 import DigitalCourse from "../Assets/Images/digital-course.jpg";
 import VideoCover from "../Assets/Images/video.jpg";
+import SectionBg from "../Assets/Images/section-bg.png"; 
+import Platform from "../Assets/Images/platform.png"; 
+import Technology from "../Assets/Images/technology.jpg"; 
+import Programming from "../Assets/Images/programming.jpg"; 
 
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -22,6 +26,8 @@ import { useState } from "react";
 import ExploreCards from "./ExploreCards";
 import WomanSection from "./WomenSection";
 import CardWithIcon from "./CardWithIcon";
+import PriceCard from "./PriceCard";
+import BlogCard from "./BlogCard";
 
 
 function HomePage() {
@@ -103,6 +109,37 @@ const courses = [
   ];
 
     const [showVideo, setShowVideo] = useState(false);
+   
+    const blogs = [
+  {
+    image:Technology,
+    date: "Jun 01, 2024",
+    category: "Technology",
+    title: "Professional Mobile Painting and Sculpting",
+    link: "#",
+  },
+  {
+    image:Programming,
+    date: "May 29, 2024",
+    category: "Programming",
+    title: "Professional Ceramic Moulding for Beginner",
+    link: "#",
+  },
+  {
+    image: "",
+    date: "May 29, 2024",
+    category: "Programming",
+    title: "Professional Ceramic Moulding for Beginner",
+    link: "#",
+  },
+  {
+    image:"",
+    date: "May 29, 2024",
+    category: "Programming",
+    title: "Professional Ceramic Moulding for Beginner",
+    link: "#",
+  },
+];
 
 
   return (
@@ -241,10 +278,131 @@ const courses = [
           </div>
         </div>
       )}
-
-     
     </div>
 
+
+<section 
+  className="platform-section py-5" style={{ backgroundImage: `url(${SectionBg})` }}>
+    
+  <div className="container">
+    <div className="row align-items-center">
+      
+      <div className="col-lg-6 mb-4 mb-lg-0">
+        <div className="section-title">
+          <div className="small-title-container">
+            <h2 className="small-title">Best Online Learning Platform</h2>
+          </div>
+          <p className="blue-title">
+            One Platform & Many <span className="green-title">courses</span> For You
+          </p>
+        </div>
+
+        <p style={{ color: "#888", marginBottom: "20px", paddingLeft: "18px" }}>
+          From blogs to emails to ad copies, auto-generate catchy, original, 
+          and high-converting copies in popular tones and languages.
+        </p>
+
+        <div className="check-container mb-3">
+          <div className="check"><i className="bi bi-check-square-fill"></i> 9/10 Average Satisfaction Rate</div>
+          <div className="check"><i className="bi bi-check-square-fill"></i> 96% Completion Rate</div>
+          <div className="check"><i className="bi bi-check-square-fill"></i> Friendly Environment & Expert Teacher</div>
+        </div>
+
+        <a href="#" className="explore-link">
+          <span className="circle-bg"></span>
+          <span>Explore Our Courses →</span>
+        </a>
+      </div>
+
+      <div className="col-lg-6 text-center">
+        <img src={Platform} alt="platform" className="img-fluid" />
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+
+<section className="choose-section">
+  <div className="section-title">
+               <div className="small-title-container">
+                 <h2 className="small-title">Popular Courses</h2>
+                <div className="line"></div></div>
+                <p className="blue-title"> choose our  
+                  <span className="green-title"> top courses</span></p>
+            </div>
+            <div className="price-cards py-5">
+               <Container fluid>
+        <Row className="g-4 justify-content-center">
+          <Col lg={4} md={12} sm={12}>
+            <PriceCard plan="Free" price="$0" upgradePrice="Upgrade as you need" />
+          </Col>
+          <Col lg={4} md={12} sm={12}>
+            <PriceCard plan="Saver plan" price="$29" upgradePrice="$348 Per Year" />
+          </Col>
+          <Col lg={4} md={12} sm={12}>
+            <PriceCard plan="Unlimited plan" price="$49" upgradePrice="$588 Per Year" />
+          </Col>
+        </Row>
+      </Container>
+         </div>   
+</section>
+
+<section className="subs" >
+  <h1 style={{color:"#1a2d62", textAlign:"center"}}>Subscripbe to our newsletter, We don't make any spam.</h1>
+  <div style={{color:"#888",textAlign:"center"}}>Lorem ipsum dolor sit amet consectetur adipisicing elitsed eiusmod tempor enim minim
+</div>
+<div className="search-input" style={{
+            display: "flex",
+            justifyContent: "center",
+            margin: "30px 0",
+          }}>
+          <input
+            type="text" name="email"
+            placeholder="Enter Your Email Address "
+            required="required" />
+          <button  className="btn1" type="submit"
+            style={{
+              cursor:"pointer",
+              padding: "15px 30px",
+              borderRadius: "0 50px 50px 0", 
+              color:"#2eca7f"}}>
+             <i className="bi bi-send "style={{color:"white"}} ></i>
+          </button>
+        </div>
+</section>
+<section className="blogs-container py-5" style={{ backgroundImage: `url(${SectionBg})` }}>
+   <div className="section-title">
+               <div className="small-title-container">
+                 <h2 className="small-title">News</h2>
+                <div className="line"> </div>
+                </div>
+                <p className="blue-title"> Our Latest
+                 <span className="green-title"> Blogs</span></p>
+            </div>
+            <Container className="my-5">
+      <Row className="g-4">
+        <Col lg={8} md={6} sm={12}>
+          <Row className="g-4">
+            {blogs.filter(blog => blog.image).map((blog, index) => (
+              <Col key={index} lg={6} md={12} sm={12}>
+                <BlogCard {...blog} />
+              </Col>
+            ))}
+          </Row>
+        </Col>
+
+        <Col lg={4} md={6} sm={12}>
+          <Row className="g-4">
+            {blogs.filter(blog => !blog.image).map((blog, index) => (
+              <Col key={index} xs={12}>
+                <BlogCard {...blog} />
+              </Col>
+            ))}
+          </Row>
+        </Col>
+      </Row>
+    </Container>
 
 </section>
 
@@ -256,6 +414,8 @@ const courses = [
 
 
 
+
+</section>
   </div>
   );
 }

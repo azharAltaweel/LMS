@@ -2,8 +2,8 @@ import { Navbar, Container } from "react-bootstrap";
 
 function Nav2(){
 return(
-<Navbar expand="lg" style={{ backgroundColor: "#20c997", fontWeight: "bold" }}>
-      <Container  className="navContainer"  >
+<Navbar expand="lg" style={{ backgroundColor: "#20c997", fontWeight: "bold"  }}>
+      <Container fluid  className="navContainer"  >
         <div className="navContact">
             <i className="bi bi-telephone-fill" ></i>
             <span>+(354) 6800 37849</span>

@@ -2,7 +2,7 @@ import { Navbar, Container, Button } from "react-bootstrap";
 import logo from "../Assets/Images/envato-logo.png"; 
 function Nav1() {
   return (
-    <Navbar expand="lg" style={{ backgroundColor: "#262626" }} fixed="top">
+    <Navbar expand="lg" className="bg-dark fixed-top top-navbar">
       <Container fluid style={{
         display:"flex",
         justifyContent:"space-between",
